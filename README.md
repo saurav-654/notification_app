@@ -179,25 +179,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - Cross-platform compatibility
 - Real-time notification handling
 
-## 🤝 Contributing
+## Screenshots
+<img width="348" height="729" alt="Screenshot 2025-07-13 231515" src="https://github.com/user-attachments/assets/4a1bf4e4-ad0c-476a-86ca-b56ef72ab525" />
+<img width="334" height="732" alt="Screenshot 2025-07-13 232017" src="https://github.com/user-attachments/assets/a8db814c-26f0-4dd3-bd47-b288f1154bac" />
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-
-1. Check the troubleshooting section above
-2. Review [React Native documentation](https://reactnative.dev/docs/getting-started)
-3. Check [Firebase documentation](https://firebase.google.com/docs/cloud-messaging)
-4. Open an issue in the repository
-
----
-
-### 🎉 Thank you for using Notification Hub!
-
-This app demonstrates modern React Native development with Firebase integration, beautiful UI design, and comprehensive notification handling. Perfect for learning FCM implementation or as a starting point for your own notification-based applications.
