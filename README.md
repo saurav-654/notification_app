@@ -8,10 +8,7 @@ A beautiful and modern React Native application for handling Firebase Cloud Mess
 - 🎨 **Beautiful UI Design** - Modern, attractive interface with smooth animations
 - 📱 **Cross-platform** - Works on both Android and iOS
 - 🚀 **Deep Linking** - Navigate to specific screens when notifications are tapped
-- 📊 **Notification Management** - View, mark as read, and remove notifications
-- 💾 **Local Storage** - Persistent notification history
-- 🎯 **Badge Counts** - WhatsApp-like unread notification counters
-- 🔧 **Backend Simulation** - Test notifications with built-in simulation
+
 
 ## 🛠️ Tech Stack
 
@@ -112,23 +109,7 @@ The app features:
 1. **Android**: Place `google-services.json` in `android/app/`
 2. **iOS**: Add `GoogleService-Info.plist` to your Xcode project
 
-### Notification Payload Format
 
-Send notifications with this structure for deep linking:
-
-```json
-{
-  "notification": {
-    "title": "Notification Title",
-    "body": "Notification message body"
-  },
-  "data": {
-    "screen": "notifications",
-    "userId": "123",
-    "type": "message"
-  }
-}
-```
 
 ## 🎯 Usage
 
