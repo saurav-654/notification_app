@@ -1,97 +1,222 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 📱 Notification Hub - React Native FCM App
 
-# Getting Started
+A beautiful and modern React Native application for handling Firebase Cloud Messaging (FCM) notifications with real-time updates and elegant UI design.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## ✨ Features
 
-## Step 1: Start Metro
+- 🔔 **Real-time FCM Notifications** - Receive push notifications via Firebase Cloud Messaging
+- 🎨 **Beautiful UI Design** - Modern, attractive interface with smooth animations
+- 📱 **Cross-platform** - Works on both Android and iOS
+- 🚀 **Deep Linking** - Navigate to specific screens when notifications are tapped
+- 📊 **Notification Management** - View, mark as read, and remove notifications
+- 💾 **Local Storage** - Persistent notification history
+- 🎯 **Badge Counts** - WhatsApp-like unread notification counters
+- 🔧 **Backend Simulation** - Test notifications with built-in simulation
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 🛠️ Tech Stack
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- **React Native** - Cross-platform mobile development
+- **Firebase Cloud Messaging** - Push notifications
+- **TypeScript** - Type-safe development
+- **React Hooks** - Modern React patterns
+- **Native Modules** - Custom FCM integration
 
-```sh
-# Using npm
-npm start
+## 📋 Prerequisites
 
-# OR using Yarn
-yarn start
+Before running this project, make sure you have:
+
+- Node.js (v16 or higher)
+- React Native development environment set up
+- Android Studio (for Android development)
+- Xcode (for iOS development, macOS only)
+- Firebase project with FCM enabled
+
+## 🚀 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd notification_app
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Firebase Setup**
+   - Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
+   - Add your Android/iOS app to the project
+   - Download `google-services.json` (Android) and place it in `android/app/`
+   - Download `GoogleService-Info.plist` (iOS) and add it to your iOS project
+
+4. **Install iOS dependencies** (macOS only)
+   ```bash
+   cd ios && pod install && cd ..
+   ```
+
+## 🏃‍♂️ Running the App
+
+### Development Mode
+
+1. **Start Metro bundler**
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
+
+2. **Run on Android**
+   ```bash
+   npm run android
+   # or
+   yarn android
+   ```
+
+3. **Run on iOS** (macOS only)
+   ```bash
+   npm run ios
+   # or
+   yarn ios
+   ```
+
+### Installing on Your Phone
+
+#### Method 1: Development Build
+```bash
+# Connect your phone via USB with USB debugging enabled
+npx react-native run-android
 ```
 
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+#### Method 2: Generate APK
+```bash
+cd android
+./gradlew assembleRelease
+# APK will be generated at: android/app/build/outputs/apk/release/app-release.apk
 ```
 
-### iOS
+## 📱 App Screenshots
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+The app features:
+- **Beautiful Header** with gradient design
+- **Welcome Screen** with notification center introduction
+- **Message Display** with attractive card layout
+- **Footer** with creator attribution
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## 🔧 Configuration
 
-```sh
-bundle install
+### Firebase Configuration
+
+1. **Android**: Place `google-services.json` in `android/app/`
+2. **iOS**: Add `GoogleService-Info.plist` to your Xcode project
+
+### Notification Payload Format
+
+Send notifications with this structure for deep linking:
+
+```json
+{
+  "notification": {
+    "title": "Notification Title",
+    "body": "Notification message body"
+  },
+  "data": {
+    "screen": "notifications",
+    "userId": "123",
+    "type": "message"
+  }
+}
 ```
 
-Then, and every time you update your native dependencies, run:
+## 🎯 Usage
 
-```sh
-bundle exec pod install
+### Receiving Notifications
+
+The app handles notifications in three states:
+- **Foreground**: Shows alert and updates UI
+- **Background**: Opens app and navigates to specified screen
+- **Quit**: Launches app and navigates to specified screen
+
+### Deep Linking
+
+Include a `screen` parameter in notification data to navigate to specific screens:
+- `notifications` - Notifications list screen
+- `profile` - User profile screen
+- `messages` - Messages screen
+- `orders` - Orders screen
+
+### Notification Management
+
+- View all received notifications
+- Mark notifications as read/unread
+- Remove individual notifications
+- Clear all notifications
+- Badge count for unread notifications
+
+## 🏗️ Project Structure
+
+```
+notification_app/
+├── App.tsx                 # Main app component
+├── services/
+│   └── NotificationService.js  # FCM service utilities
+├── android/                # Android-specific files
+├── ios/                    # iOS-specific files
+└── README.md              # This file
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## 🔍 Troubleshooting
 
-```sh
-# Using npm
-npm run ios
+### Common Issues
 
-# OR using Yarn
-yarn ios
-```
+1. **FCM not working**
+   - Verify Firebase configuration files are in correct locations
+   - Check if notification permissions are granted
+   - Ensure FCM token is being generated
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+2. **Build errors**
+   - Clean and rebuild: `npx react-native clean && npm run android`
+   - Clear Metro cache: `npx react-native start --reset-cache`
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+3. **Notification not showing**
+   - Check device notification settings
+   - Verify FCM token in console logs
+   - Test with Firebase Console test message
 
-## Step 3: Modify your app
+## 📄 License
 
-Now that you have successfully run the app, let's make changes!
+This project is open source and available under the [MIT License](LICENSE).
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## 👨‍💻 Developer
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+**Created by Saurav Agrawal**
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+- Elegant UI design with modern React Native patterns
+- Firebase Cloud Messaging integration
+- Cross-platform compatibility
+- Real-time notification handling
 
-## Congratulations! :tada:
+## 🤝 Contributing
 
-You've successfully run and modified your React Native App. :partying_face:
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### Now what?
+## 📞 Support
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+If you encounter any issues or have questions:
 
-# Troubleshooting
+1. Check the troubleshooting section above
+2. Review [React Native documentation](https://reactnative.dev/docs/getting-started)
+3. Check [Firebase documentation](https://firebase.google.com/docs/cloud-messaging)
+4. Open an issue in the repository
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+---
 
-# Learn More
+### 🎉 Thank you for using Notification Hub!
 
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This app demonstrates modern React Native development with Firebase integration, beautiful UI design, and comprehensive notification handling. Perfect for learning FCM implementation or as a starting point for your own notification-based applications.
