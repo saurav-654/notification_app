@@ -1,22 +1,72 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 📱 Notification Hub - React Native FCM App
 
-# Getting Started
+A beautiful and modern React Native application for handling Firebase Cloud Messaging (FCM) notifications with real-time updates and elegant UI design.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## ✨ Features
 
-## Step 1: Start Metro
+- 🔔 **Real-time FCM Notifications** - Receive push notifications via Firebase Cloud Messaging
+- 🎨 **Beautiful UI Design** - Modern, attractive interface with smooth animations
+- 📱 **Cross-platform** - Works on both Android and iOS
+- 🚀 **Deep Linking** - Navigate to specific screens when notifications are tapped
+- 📊 **Notification Management** - View, mark as read, and remove notifications
+- 💾 **Local Storage** - Persistent notification history
+- 🎯 **Badge Counts** - WhatsApp-like unread notification counters
+- 🔧 **Backend Simulation** - Test notifications with built-in simulation
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 🛠️ Tech Stack
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- **React Native** - Cross-platform mobile development
+- **Firebase Cloud Messaging** - Push notifications
+- **TypeScript** - Type-safe development
+- **React Hooks** - Modern React patterns
+- **Native Modules** - Custom FCM integration
 
-```sh
-# Using npm
-npm start
+## 📋 Prerequisites
 
-# OR using Yarn
-yarn start
-```
+Before running this project, make sure you have:
+
+- Node.js (v16 or higher)
+- React Native development environment set up
+- Android Studio (for Android development)
+- Xcode (for iOS development, macOS only)
+- Firebase project with FCM enabled
+
+## 🚀 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/saurav-654/notification_app.git
+   cd notification_app
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Firebase Setup**
+   - Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
+   - Add your Android/iOS app to the project
+   - Download `google-services.json` (Android) and place it in `android/app/`
+   - Download `GoogleService-Info.plist` (iOS) and add it to your iOS project
+
+4. **Install iOS dependencies** (macOS only)
+   ```bash
+   cd ios && pod install && cd ..
+   ```
+
+## 🏃‍♂️ Running the App
+
+### Development Mode
+
+1. **Start Metro bundler**
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
 2. **Run on Android**
    ```bash
