@@ -66,25 +66,9 @@ When you want to forcefully reload, for example to reset the state of your app, 
 - **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
 - **iOS**: Press <kbd>R</kbd> in iOS Simulator.
 
-## Congratulations! :tada:
+## Screenshot
 
-You've successfully run and modified your React Native App. :partying_face:
+<img width="334" height="732" alt="Screenshot 2025-07-13 232017" src="https://github.com/user-attachments/assets/b62bfbfe-5acd-4317-ba59-3c14aac7934f" />
+<img width="332" height="730" alt="Screenshot 2025-07-14 002748" src="https://github.com/user-attachments/assets/83d115da-a1de-4496-90a7-e9415b0b0e90" />
+<img width="325" height="725" alt="Screenshot 2025-07-14 002617" src="https://github.com/user-attachments/assets/2d04eb3e-e0f1-4184-b364-b8fcd8540b3a" />
 
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
